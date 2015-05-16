@@ -25,8 +25,9 @@ SECRET_KEY = 'o-e*di32+q&rj*np3lhk3nzid7gh)qcb4esfik(#k@539%0ism'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS =[]
 
+AUTTH_PROFILE_MODULE = 'student.Student',
 
 # Application definition
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'account',
+    'student',
 
 )
 
@@ -51,7 +53,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'account.middleware.localeMiddleware',
+    'account.middleware.LocaleMiddleware',
     'account.middleware.TimezoneMiddleware',
 )
 
